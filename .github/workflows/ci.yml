@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Env
+        run: cp .env.example .env
+
+      - name: Stack
+        run: docker compose up -d --build
+
+      - name: Wait PHP
+        run: |
+          for i in $(seq 1 90); do
+            if docker compose exec -T php php artisan --version >/dev/null 2>&1; then
+              exit 0
+            fi
+            sleep 5
+          done
+          docker compose logs php
+          exit 1
+
+      - name: Wait HTTP
+        run: |
+          for i in $(seq 1 40); do
+            if curl -sf http://127.0.0.1/up >/dev/null; then
+              exit 0
+            fi
+            sleep 3
+          done
+          docker compose logs nginx php
+          exit 1
+
+      - name: Wait Grafana
+        run: |
+          for i in $(seq 1 40); do
+            if curl -sf http://127.0.0.1:3000/api/health >/dev/null; then
+              exit 0
+            fi
+            sleep 5
+          done
+          docker compose logs grafana
+          exit 1
+
+      - name: Seed
+        run: docker compose exec -T php php artisan db:seed --force
+
+      - name: Tests
+        run: docker compose exec -T php php artisan test
+
+      - name: Logs
+        if: failure()
+        run: docker compose logs --tail=250

@@ -1,0 +1,17 @@
+.env
+.DS_Store
+*.log
+/apps/api/vendor/
+/apps/api/node_modules/
+/apps/api/public/hot
+/apps/api/public/storage
+/apps/api/storage/*.key
+/apps/api/storage/pail
+/apps/api/.phpunit.result.cache
+/apps/api/.phpunit.cache
+/apps/api/Homestead.json
+/apps/api/Homestead.yaml
+/apps/api/auth.json
+/apps/api/.env
+/packages/*/vendor/
+/packages/*/composer.lock

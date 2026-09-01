@@ -1,0 +1,1018 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "dashboard",
+      "includeVars": false,
+      "keepTime": true,
+      "tags": [],
+      "targetBlank": false,
+      "title": "HTTP load",
+      "tooltip": "",
+      "type": "link",
+      "url": "/d/http-load"
+    },
+    {
+      "asDropdown": false,
+      "icon": "dashboard",
+      "includeVars": false,
+      "keepTime": true,
+      "tags": [],
+      "targetBlank": false,
+      "title": "Commerce events",
+      "tooltip": "",
+      "type": "link",
+      "url": "/d/commerce-events"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать all",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=all"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Unit",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Unit"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Component",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Component"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Feature",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Feature"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Api",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Api"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Functional",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Functional"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Database",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Database"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Integration",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Integration"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать System",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=System"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать E2E",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=E2E"
+    },
+    {
+      "asDropdown": false,
+      "icon": "bolt",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [],
+      "targetBlank": true,
+      "title": "прогнать Performance",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost/api/tests/run?suite=Performance"
+    }
+  ],
+  "panels": [
+    {
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 14,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "[прогнать all](http://localhost/api/tests/run?suite=all) · [Unit](http://localhost/api/tests/run?suite=Unit) · [Component](http://localhost/api/tests/run?suite=Component) · [Feature](http://localhost/api/tests/run?suite=Feature) · [Api](http://localhost/api/tests/run?suite=Api) · [Functional](http://localhost/api/tests/run?suite=Functional) · [Database](http://localhost/api/tests/run?suite=Database) · [Integration](http://localhost/api/tests/run?suite=Integration) · [System](http://localhost/api/tests/run?suite=System) · [E2E](http://localhost/api/tests/run?suite=E2E) · [Performance](http://localhost/api/tests/run?suite=Performance)",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.5.2",
+      "title": "Прогон",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 3
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT count() AS tests FROM logs.test_cases",
+          "refId": "A"
+        }
+      ],
+      "title": "Tests",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 3
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT countIf(status = 'passed') AS passed FROM (SELECT argMax(r.status, r.event_time) AS status FROM logs.test_cases AS c LEFT JOIN logs.test_results AS r ON r.test_class = c.test_class AND r.test_name = c.test_name AND r.event_time >= $__fromTime AND r.event_time <= $__toTime GROUP BY c.test_class, c.test_name)",
+          "refId": "A"
+        }
+      ],
+      "title": "Passed",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 3
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT countIf(status IN ('failed', 'errored')) AS failed FROM (SELECT argMax(r.status, r.event_time) AS status FROM logs.test_cases AS c LEFT JOIN logs.test_results AS r ON r.test_class = c.test_class AND r.test_name = c.test_name AND r.event_time >= $__fromTime AND r.event_time <= $__toTime GROUP BY c.test_class, c.test_name)",
+          "refId": "A"
+        }
+      ],
+      "title": "Failed",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 0.95
+              },
+              {
+                "color": "green",
+                "value": 0.99
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 3
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT if(count() = 0, 1, countIf(status = 'passed') / count()) AS pass_rate FROM (SELECT argMax(r.status, r.event_time) AS status FROM logs.test_cases AS c LEFT JOIN logs.test_results AS r ON r.test_class = c.test_class AND r.test_name = c.test_name AND r.event_time >= $__fromTime AND r.event_time <= $__toTime GROUP BY c.test_class, c.test_name)",
+          "refId": "A"
+        }
+      ],
+      "title": "Pass rate",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Tests",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "bars",
+            "fillOpacity": 40,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 7
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 0,
+          "rawSql": "SELECT toStartOfMinute(event_time) AS time, suite, count() AS tests FROM logs.test_results WHERE event_time >= $__fromTime AND event_time <= $__toTime GROUP BY time, suite ORDER BY time",
+          "refId": "A"
+        }
+      ],
+      "title": "Pyramid by suite",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Tests",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 15,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 7
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 0,
+          "rawSql": "SELECT toStartOfMinute(event_time) AS time, status, count() AS tests FROM logs.test_results WHERE event_time >= $__fromTime AND event_time <= $__toTime GROUP BY time, status ORDER BY time",
+          "refId": "A"
+        }
+      ],
+      "title": "Status over time",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 15
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "pieType": "donut",
+        "reduceOptions": {
+          "calcs": ["sum"],
+          "fields": "",
+          "values": true
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT suite, count() AS tests FROM logs.test_cases GROUP BY suite ORDER BY indexOf(['Unit','Component','Feature','Api','Functional','Database','Integration','System','E2E','Performance'], suite)",
+          "refId": "A"
+        }
+      ],
+      "title": "Share by suite",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 15
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "pieType": "donut",
+        "reduceOptions": {
+          "calcs": ["sum"],
+          "fields": "",
+          "values": true
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT if(status = '', 'pending', status) AS status, count() AS tests FROM (SELECT ifNull(argMax(r.status, r.event_time), '') AS status FROM logs.test_cases AS c LEFT JOIN logs.test_results AS r ON r.test_class = c.test_class AND r.test_name = c.test_name AND r.event_time >= $__fromTime AND r.event_time <= $__toTime GROUP BY c.test_class, c.test_name) GROUP BY status ORDER BY status",
+          "refId": "A"
+        }
+      ],
+      "title": "Share by status",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 15
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "pieType": "donut",
+        "reduceOptions": {
+          "calcs": ["sum"],
+          "fields": "",
+          "values": true
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT c.suite AS suite, round(sum(ifNull(r.duration_ms, 0)), 1) AS duration_ms FROM logs.test_cases AS c LEFT JOIN (SELECT test_class, test_name, argMax(duration_ms, event_time) AS duration_ms FROM logs.test_results WHERE event_time >= $__fromTime AND event_time <= $__toTime GROUP BY test_class, test_name) AS r ON r.test_class = c.test_class AND r.test_name = c.test_name GROUP BY c.suite ORDER BY duration_ms DESC",
+          "refId": "A"
+        }
+      ],
+      "title": "Duration by suite",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "inspect": false
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
+      "id": 10,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": ["sum"],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT c.suite AS suite, count() AS tests, countIf(r.status = 'passed') AS passed, countIf(r.status IN ('failed', 'errored')) AS failed, countIf(r.status = 'skipped') AS skipped, round(sum(ifNull(r.duration_ms, 0)), 1) AS duration_ms FROM logs.test_cases AS c LEFT JOIN (SELECT test_class, test_name, argMax(status, event_time) AS status, argMax(duration_ms, event_time) AS duration_ms FROM logs.test_results WHERE event_time >= $__fromTime AND event_time <= $__toTime GROUP BY test_class, test_name) AS r ON r.test_class = c.test_class AND r.test_name = c.test_name GROUP BY c.suite ORDER BY indexOf(['Unit','Component','Feature','Api','Functional','Database','Integration','System','E2E','Performance'], c.suite)",
+          "refId": "A"
+        }
+      ],
+      "title": "Suite totals",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "inspect": false
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "run"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "прогнать",
+                    "url": "http://localhost/api/tests/run?class=${__data.fields.test_class}&method=${__data.fields.test_name}",
+                    "targetBlank": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "log"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "лог",
+                    "url": "http://localhost/api/tests/log?class=${__data.fields.test_class}&method=${__data.fields.test_name}",
+                    "targetBlank": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 18,
+        "w": 24,
+        "x": 0,
+        "y": 31
+      },
+      "id": 11,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": ["sum"],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT c.suite AS suite, c.test_class AS test_class, c.test_name AS test_name, ifNull(argMax(r.status, r.event_time), '') AS status, ifNull(toString(argMax(r.event_time, r.event_time)), '') AS event_time, ifNull(round(argMax(r.duration_ms, r.event_time), 2), 0) AS duration_ms, ifNull(argMax(r.message, r.event_time), '') AS message, 'прогнать' AS run, 'лог' AS log FROM logs.test_cases AS c LEFT JOIN logs.test_results AS r ON r.test_class = c.test_class AND r.test_name = c.test_name GROUP BY c.suite, c.test_class, c.test_name ORDER BY c.suite, c.test_class, c.test_name",
+          "refId": "A"
+        }
+      ],
+      "title": "Every test",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "inspect": false
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "run"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "прогнать набор",
+                    "url": "http://localhost/api/tests/run?suite=${__data.fields.suite}",
+                    "targetBlank": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 49
+      },
+      "id": 13,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": ["sum"],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT arrayJoin(['all','Unit','Component','Feature','Api','Functional','Database','Integration','System','E2E','Performance']) AS suite, 'прогнать' AS run",
+          "refId": "A"
+        }
+      ],
+      "title": "Run suites",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-clickhouse-datasource",
+        "uid": "clickhouse"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "inspect": false
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 57
+      },
+      "id": 12,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": ["sum"],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-clickhouse-datasource",
+            "uid": "clickhouse"
+          },
+          "format": 1,
+          "rawSql": "SELECT event_time, suite, test_class, test_name, status, message FROM (SELECT max(r.event_time) AS event_time, c.suite AS suite, c.test_class AS test_class, c.test_name AS test_name, argMax(r.status, r.event_time) AS status, argMax(r.message, r.event_time) AS message FROM logs.test_cases AS c LEFT JOIN logs.test_results AS r ON r.test_class = c.test_class AND r.test_name = c.test_name AND r.event_time >= $__fromTime AND r.event_time <= $__toTime GROUP BY c.suite, c.test_class, c.test_name) WHERE status IN ('failed', 'errored') ORDER BY event_time DESC LIMIT 50",
+          "refId": "A"
+        }
+      ],
+      "title": "Failures",
+      "type": "table"
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 40,
+  "tags": ["phpunit", "tests"],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "title": "PHPUnit tests",
+  "uid": "phpunit-tests",
+  "version": 2
+}
